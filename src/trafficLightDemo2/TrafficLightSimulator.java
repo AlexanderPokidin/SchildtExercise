@@ -1,12 +1,12 @@
-package TrafficLightDemo;
+package trafficLightDemo2;
 
 public class TrafficLightSimulator implements Runnable {
     private Thread thrd;
     private TrafficLightColor tlc;
-    boolean stop = false;
-    boolean changed = false;
+    private boolean stop = false;
+    private boolean changed = false;
 
-    public TrafficLightSimulator(TrafficLightColor init) {
+    TrafficLightSimulator(TrafficLightColor init) {
         tlc = init;
 
         thrd = new Thread(this);
@@ -25,17 +25,8 @@ public class TrafficLightSimulator implements Runnable {
         while (!stop) {
 
             try {
-                switch (tlc) {
-                    case GREEN:
-                        Thread.sleep(10_000);
-                        break;
-                    case YELLOW:
-                        Thread.sleep(2_000);
-                        break;
-                    case RED:
-                        Thread.sleep(12_000);
-                        break;
-                }
+                Thread.sleep(tlc.getDelay());
+
             } catch (InterruptedException exc) {
                 System.out.println(exc);
             }
@@ -43,7 +34,7 @@ public class TrafficLightSimulator implements Runnable {
         }
     }
 
-    synchronized void changeColor() {
+    private synchronized void changeColor() {
         switch (tlc) {
             case RED:
                 tlc = TrafficLightColor.GREEN;

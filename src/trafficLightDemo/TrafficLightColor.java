@@ -1,4 +1,4 @@
-package TrafficLightDemo;
+package trafficLightDemo;
 
 public enum TrafficLightColor {
     RED, GREEN, YELLOW

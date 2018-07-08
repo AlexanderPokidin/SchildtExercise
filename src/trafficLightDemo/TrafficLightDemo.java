@@ -1,4 +1,4 @@
-package TrafficLightDemo;
+package trafficLightDemo;
 
 public class TrafficLightDemo {
     public static void main(String[] args) {
