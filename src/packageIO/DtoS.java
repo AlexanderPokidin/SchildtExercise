@@ -5,7 +5,7 @@ import java.io.*;
 public class DtoS {
     public static void main(String[] args) {
         String str;
-        try (BufferedReader br  = new BufferedReader(new FileReader("test.txt"))){
+        try (BufferedReader br  = new BufferedReader(new FileReader("test_char.txt"))){
             while ((str = br.readLine()) != null){
                 System.out.println(str);
             }

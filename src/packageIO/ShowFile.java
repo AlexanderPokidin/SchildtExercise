@@ -8,7 +8,7 @@ public class ShowFile {
         int i;
 
         if (args.length != 1) {
-            System.out.println("Иcnoльзoвaниe: packageIO.ShowFile E:\\StudioProjects\\Exercise\\test.txt");
+            System.out.println("Иcnoльзoвaниe: packageIO.ShowFile E:\\StudioProjects\\Exercise\\test_char.txt");
 //            return;
         }
 

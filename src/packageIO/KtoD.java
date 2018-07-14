@@ -11,7 +11,7 @@ public class KtoD {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Пpизнaк конца ввода - строка 'stop' ");
 
-        try (FileWriter fw = new FileWriter("test.txt")) {
+        try (FileWriter fw = new FileWriter("test_char.txt")) {
             do {
                 System.out.print(": ");
                 str = br.readLine();
