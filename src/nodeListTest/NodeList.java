@@ -1,42 +1,30 @@
 package nodeListTest;
 
-import java.util.LinkedList;
 
 public class NodeList {
-    LinkedList<Integer> linkedList;
     Node first;
     int size;
 
 
-    public void insert (int position, int value) throws IndexOutOfBoundsException{
-        if (position < 0 && position > size){
+    public void insert(int position, int value) throws IndexOutOfBoundsException {
+        if (position < 0 && position > size) {
             throw new IndexOutOfBoundsException();
-        }
-        else {
-            if(isEmpty()){
+        } else {
+            if (isEmpty()) {
                 first = new Node();
                 first.value = value;
                 first.next = null;
                 size++;
                 System.out.println(size);
-            }
-            else{
-                if (position == size){
+            } else {
+                if (position == size) {
                     throw new IndexOutOfBoundsException();
-                } else if(position == 0){
-                    Node another = new Node();
-                    another = first;
+                } else if (position == 0) {
+                    Node another = first;
                     first.value = value;
                     first.next = another;
                     size++;
                     System.out.println(size);
-//                } else if (position == size-1){
-//                    Node another = new Node();
-//                    another.value = value;
-//                    another.next = null;
-////                    Node.get(position-1).next = another;
-//                    size++;
-//                    System.out.println(size);
                 } else {
                     Node another = new Node();
                     another.value = value;
@@ -50,7 +38,10 @@ public class NodeList {
     }
 
 
-//    public Node get(int position){
+//    public Node get(int position) {
+//        for (int i = 0; i < position; i++) {
+//
+//        }
 //        return Node(position);
 //    }
 
